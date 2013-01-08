@@ -62,11 +62,7 @@ else
         let rv += &ts - i
         let i = 0
       else
-        if char2nr(char) > 255
-          let rv += 2
-        else
-          let rv += 1
-        endif
+        let rv += strwidth(char)
         let i = (i + 1) % &ts
       endif
     endfor
